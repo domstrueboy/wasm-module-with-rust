@@ -1,0 +1,24 @@
+[package]
+name = "rust-lib"
+version = "0.1.0"
+authors = ["Pavel Bobylyev <domstrueboy@gmail.com>"]
+edition = "2018"
+description = "A sample project with wasm-pack"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/domstrueboy/wasm-module-with-rust"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.74"
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
